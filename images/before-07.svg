@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>before-07-icon@1.5x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="EH-Website-HXWorkbench-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="01-Product-Desktop-v2" transform="translate(-903.000000, -1599.000000)" stroke="#FF2198" stroke-width="2">
+            <g id="Product" transform="translate(-34.000000, 209.000000)">
+                <g id="old-vs-new" transform="translate(34.000000, 884.000000)">
+                    <g id="Before" transform="translate(0.000000, 130.000000)">
+                        <g id="graphic-before" transform="translate(308.000000, 156.000000)">
+                            <g id="before-07" transform="translate(566.000000, 189.000000)">
+                                <g id="before-07-icon" transform="translate(30.000000, 32.000000)">
+                                    <path d="M12,0 L16,0 C17.1045695,0 18,0.8954305 18,2 L18,16 C18,17.1045695 17.1045695,18 16,18 L12,18" id="Path"></path>
+                                    <polyline id="Path" points="7 14 12 9 7 4"></polyline>
+                                    <line x1="12" y1="9" x2="0" y2="9" id="Path"></line>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

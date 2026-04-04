@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="248px" height="248px" viewBox="0 0 248 248" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bubble</title>
+    <defs>
+        <linearGradient x1="77.1296296%" y1="9.40393519%" x2="31.7923826%" y2="99.9569592%" id="linearGradient-1">
+            <stop stop-color="#3D178E" offset="0%"></stop>
+            <stop stop-color="#2400CA" offset="99.9524916%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.599911644">
+        <g id="Background/Default/Desktop" transform="translate(-30.000000, -222.000000)" fill="url(#linearGradient-1)">
+            <g id="bubbles">
+                <g transform="translate(30.000000, -249.000000)">
+                    <circle id="bubble" opacity="0.898530506" cx="124" cy="595" r="124"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

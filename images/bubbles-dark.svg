@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1685px" height="919px" viewBox="0 0 1685 919" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>bubbles</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="77.1296296%" y1="9.40393519%" x2="31.7923826%" y2="99.9569592%" id="linearGradient-1">
+            <stop stop-color="#3D178E" offset="0%"></stop>
+            <stop stop-color="#2400CA" offset="99.9524916%"></stop>
+        </linearGradient>
+        <linearGradient x1="166.341556%" y1="-40.7848396%" x2="23.6334749%" y2="93.9055901%" id="linearGradient-2">
+            <stop stop-color="#00FBBC" offset="0%"></stop>
+            <stop stop-color="#1E69F2" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-21.4%" y="-21.4%" width="142.9%" height="142.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="88.1436507%" y1="26.3380312%" x2="-15.6921875%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#030330" offset="0%"></stop>
+            <stop stop-color="#0037CC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="EH-Website-Homepage-v2-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.599911644">
+        <g id="Desktop-HD" transform="translate(-883.000000, -684.000000)">
+            <g id="bubbles" transform="translate(883.000000, 684.000000)">
+                <circle id="bubble" fill="url(#linearGradient-1)" opacity="0.898530506" cx="124" cy="592" r="124"></circle>
+                <path d="M1034,906 C1047.47695,906 1059.17483,898.382874 1065.02331,887.218941 C1067.5633,882.370467 1069,876.853013 1069,871 C1069,851.670034 1053.32997,836 1034,836 C1014.67003,836 999,851.670034 999,871 C999,890.329966 1014.67003,906 1034,906 Z" id="bubble" fill="url(#linearGradient-2)" opacity="0.600027902" filter="url(#filter-3)"></path>
+                <circle id="bubble" fill="url(#linearGradient-4)" opacity="0.298223586" cx="1435" cy="250" r="250"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="22px" viewBox="0 0 20 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>before-03-icon@1.5x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="EH-Website-HXWorkbench-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="01-Product-Desktop-v2" transform="translate(-527.000000, -1599.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="Product" transform="translate(-34.000000, 209.000000)">
+                <g id="old-vs-new" transform="translate(34.000000, 884.000000)">
+                    <g id="Before" transform="translate(0.000000, 130.000000)">
+                        <g id="graphic-before" transform="translate(308.000000, 156.000000)">
+                            <g id="before-03" transform="translate(189.000000, 189.000000)">
+                                <g id="before-03-icon" transform="translate(31.000000, 32.000000)">
+                                    <ellipse id="Oval" cx="9" cy="3" rx="9" ry="3"></ellipse>
+                                    <path d="M18,10 C18,11.66 14,13 9,13 C4,13 0,11.66 0,10" id="Path"></path>
+                                    <path d="M0,3 L0,17 C0,18.66 4,20 9,20 C14,20 18,18.66 18,17 L18,3" id="Path"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

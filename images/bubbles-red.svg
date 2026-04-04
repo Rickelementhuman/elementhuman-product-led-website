@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1264px" height="583px" viewBox="0 0 1264 583" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>bubbles</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F9BE00" offset="0%"></stop>
+            <stop stop-color="#F60000" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-22.2%" y="-22.2%" width="144.4%" height="144.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FAD961" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-21.4%" y="-21.4%" width="142.9%" height="142.9%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="50%" y1="17.31875%" x2="25.60625%" y2="95.759375%" id="linearGradient-5">
+            <stop stop-color="#F9BE00" offset="0%"></stop>
+            <stop stop-color="#F60000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="EH-Website-HXScience-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-100.000000, -227.000000)">
+            <g id="bubbles" transform="translate(100.000000, 227.000000)">
+                <circle id="bubble" fill="url(#linearGradient-1)" opacity="0.596935454" filter="url(#filter-2)" cx="1171.5" cy="370.5" r="67.5"></circle>
+                <path d="M872,570 C885.476953,570 897.17483,562.382874 903.023313,551.218941 C905.563298,546.370467 907,540.853013 907,535 C907,515.670034 891.329966,500 872,500 C852.670034,500 837,515.670034 837,535 C837,554.329966 852.670034,570 872,570 Z" id="bubble" fill="url(#linearGradient-3)" opacity="0.600027902" filter="url(#filter-4)"></path>
+                <circle id="bubble" fill="url(#linearGradient-5)" opacity="0.298223586" cx="250" cy="250" r="250"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

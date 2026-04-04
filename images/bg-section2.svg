@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="382px" height="360px" viewBox="0 0 382 360" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>bg-right</title>
+    <desc>Created with Sketch.</desc>
+    <g id="EH-Website-Homepage-v2-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00-Homepage-doctors-Desktop-v2" transform="translate(-1041.000000, -755.000000)">
+            <g id="What-we-offer" transform="translate(63.000000, 614.000000)">
+                <g id="BG">
+                    <g id="bg-right" transform="translate(1168.000000, 321.000000) scale(-1, 1) translate(-1168.000000, -321.000000) translate(978.000000, 141.000000)">
+                        <rect id="Rectangle" fill="#7E0698" opacity="0.499953497" x="117" y="208" width="21" height="21"></rect>
+                        <rect id="Rectangle" fill="#D031EA" x="185" y="72" width="34" height="34"></rect>
+                        <rect id="Rectangle" fill="#8F21A1" x="274" y="148" width="14" height="14"></rect>
+                        <path d="M161,288.445037 C169.892952,282.450282 170.526516,285.543315 178.337648,288.445037 C186.14878,291.34676 187.1935,284.804297 194.362523,284.804297 C202.930997,284.804297 203.713048,290.554491 212.088863,288.032164 C215.09212,287.127752 215.326554,285.649914 219.628199,284.804297 C230.814163,282.605362 232.192285,293.356396 244.023572,286.578511 C255.85486,279.800626 258.171698,289.765236 266,288.032164" id="green-path" stroke="#61E9A9" stroke-width="3" transform="translate(213.500000, 286.687272) scale(-1, 1) translate(-213.500000, -286.687272) "></path>
+                        <path d="M151,157.55466 C156.335771,153.957806 156.715909,155.813626 161.402589,157.55466 C166.089268,159.295693 166.7161,155.370215 171.017514,155.370215 C176.158598,155.370215 176.627829,158.820332 181.653318,157.306936 C183.455272,156.764288 183.595933,155.877585 186.17692,155.370215 C192.888498,154.050854 193.715371,160.501475 200.814143,156.434744 C207.912916,152.368013 209.303019,158.346779 214,157.306936" id="green-path" stroke="#25CC7D" stroke-width="3" transform="translate(182.500000, 156.500000) scale(-1, 1) translate(-182.500000, -156.500000) "></path>
+                        <path d="M253,345.703106 C256.557181,343.305204 256.810606,344.542417 259.935059,345.703106 C263.059512,346.863795 263.4774,344.24681 266.345009,344.24681 C269.772399,344.24681 270.085219,346.546888 273.435545,345.537957 C274.636848,345.176192 274.730622,344.585057 276.45128,344.24681 C280.925665,343.367236 281.476914,347.66765 286.209429,344.956496 C290.941944,342.245342 291.868679,346.231186 295,345.537957" id="green-path" stroke="#25CC7D" stroke-width="3" transform="translate(274.000000, 345.000000) scale(-1, 1) translate(-274.000000, -345.000000) "></path>
+                        <polygon id="Triangle" fill="#F9BE00" points="176 333 193 360 159 360"></polygon>
+                        <polygon id="Triangle" stroke="#F67B0E" stroke-width="4" points="295 219 316 253 274 253"></polygon>
+                        <polygon id="Triangle" fill="#F9BE00" points="330.5 296 337 307 324 307"></polygon>
+                        <rect id="Rectangle" stroke="#6DC9FF" stroke-width="4" x="52" y="253" width="47" height="18"></rect>
+                        <rect id="Rectangle" fill="#00A0FF" x="351" y="203" width="29" height="11"></rect>
+                        <rect id="Rectangle" fill="#007AFF" opacity="0.298804874" x="7" y="333" width="68" height="26"></rect>
+                        <circle id="Oval" fill="#DE107E" cx="214" cy="218" r="17"></circle>
+                        <circle id="Oval" fill="#FF2198" cx="344" cy="107" r="7"></circle>
+                        <circle id="Oval" stroke="#FF68B9" stroke-width="4" cx="52.5" cy="124.5" r="52.5"></circle>
+                        <circle id="Oval" fill="#FF68B9" opacity="0.497744606" cx="318" cy="24" r="24"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

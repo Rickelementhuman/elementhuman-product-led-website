@@ -1,0 +1,752 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <title>Element Human - SSP</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <style>
+            :root {
+              --primary-bg: #f8f9fa;
+              --container-bg: #ffffff;
+              --border-color: #dee2e6;
+              --text-color: #495057;
+              --label-color: #343a40;
+              --accent-pink: #ff2198;
+              --accent-blue: #00a0ff;
+              --shadow-color: rgba(0, 0, 0, 0.05);
+            }
+            body {
+              font-family: 'Poppins', sans-serif;
+              background-color: var(--primary-bg);
+              margin: 0;
+              padding: 20px;
+              color: var(--text-color);
+            }
+            .dashboard-container {
+              max-width: 1280px;
+              margin: auto;
+            }
+            #filters {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+              gap: 20px;
+              padding: 20px;
+              background-color: var(--container-bg);
+              border-radius: 12px;
+              margin-bottom: 20px;
+              border: 1px solid var(--border-color);
+              box-shadow: 0 4px 12px var(--shadow-color);
+            }
+            .filter-group {
+              display: flex;
+              flex-direction: column;
+            }
+            #filters label {
+              margin-bottom: 8px;
+              font-weight: 600;
+              color: var(--label-color);
+              font-size: 0.9rem;
+            }
+            #filters select {
+              padding: 10px 12px;
+              border-radius: 8px;
+              border: 1px solid var(--border-color);
+              background-color: #fff;
+              font-family: 'Poppins', sans-serif;
+              font-size: 1rem;
+              width: 100%;
+              -webkit-appearance: none;
+              appearance: none;
+              background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M5%207.5l5%205%205-5%22%20stroke%3D%22%236C6C80%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E');
+              background-repeat: no-repeat;
+              background-position: right 12px center;
+            }
+            .chart-figure-container {
+              padding: 20px;
+              background-color: var(--container-bg);
+              border: 1px solid var(--border-color);
+              border-radius: 15px;
+              box-shadow: 0 4px 12px var(--shadow-color);
+            }
+            #chart-container {
+              width: 100%;
+              height: 600px;
+              /* Default height */
+            }
+          </style>
+    </head>
+    <body>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+      <script src="https://code.highcharts.com/modules/export-data.js"></script>
+      <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+      <div class="dashboard-container">
+        <div id="filters">
+          <div class="filter-group">
+            <label for="Brand Category">Brand Category:</label>
+            <select id="Brand Category">
+              <option selected="" value=""> -- all -- </option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="Creator">Creator:</label>
+            <select id="Creator">
+              <option selected="" value=""> -- all -- </option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="Brand Name">Brand Name:</label>
+            <select id="Brand Name">
+              <option selected="" value=""> -- all -- </option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="Country">Country:</label>
+            <select id="Country">
+              <option selected="" value=""> -- all -- </option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="Month-Year">Month-Year:</label>
+            <select id="Month-Year">
+              <option selected="" value=""> -- all -- </option>
+            </select>
+          </div>
+        </div>
+        <div class="chart-figure-container">
+          <div id="chart-container"></div>
+        </div>
+      </div>
+      <script type="text/javascript">
+            Highcharts.setOptions({
+              colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
+              chart: {
+                style: {
+                  fontFamily: 'Poppins, sans-serif'
+                }
+              }
+            });
+            const series = [{
+                name: 'Instagram',
+                id: 'Instagram',
+                color: 'rgba(5, 141, 199, 0.7)',
+                marker: {
+                  symbol: 'circle'
+                }
+              },
+              {
+                name: 'TikTok',
+                id: 'TikTok',
+                color: 'rgba(80, 180, 50, 0.7)',
+                marker: {
+                  symbol: 'triangle'
+                }
+              },
+              {
+                name: 'Facebook',
+                id: 'Facebook',
+                color: 'rgba(237, 86, 27, 0.7)',
+                marker: {
+                  symbol: 'square'
+                }
+              },
+              {
+                name: 'YouTube Shorts',
+                id: 'YouTube Shorts',
+                color: 'rgba(210, 105, 30, 0.7)',
+                marker: {
+                  symbol: 'diamond'
+                }
+              }
+            ];
+            const filters = [{
+                id: 'Creator',
+                type: 'select',
+                options: [],
+                value: null
+              },
+              {
+                id: 'Brand Name',
+                type: 'select',
+                options: [],
+                value: null
+              },
+              {
+                id: 'Brand Category',
+                type: 'select',
+                options: [],
+                value: null
+              },
+              {
+                id: 'Country',
+                type: 'select',
+                options: [],
+                value: null
+              },
+              {
+                id: 'Month-Year',
+                type: 'select',
+                options: [],
+                value: null
+              }
+            ];
+            const data = [{
+              "Creator": "Creative Cathy",
+              "Month-Year": "Sep-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 95.43,
+              "Staying Power": 89.67
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Sep-24",
+              "Country": "GB",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "YouTube Shorts",
+              "Stopping Power": 73.56,
+              "Staying Power": 35.67
+            }, {
+              "Creator": "Jacques Cousteau",
+              "Month-Year": "Sep-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 37.45,
+              "Staying Power": 30.12
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Sep-24",
+              "Country": "GB",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "YouTube Shorts",
+              "Stopping Power": 84.51,
+              "Staying Power": 93.21
+            }, {
+              "Creator": "Authentic Alison",
+              "Month-Year": "Sep-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "YouTube Shorts",
+              "Stopping Power": 68.9,
+              "Staying Power": 39.87
+            }, {
+              "Creator": "Creative Cathy",
+              "Month-Year": "Sep-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 56.78,
+              "Staying Power": 64.53
+            }, {
+              "Creator": "Jacques Cousteau",
+              "Month-Year": "Sep-24",
+              "Country": "GB",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 42.1,
+              "Staying Power": 97.32
+            }, {
+              "Creator": "Authentic Alison",
+              "Month-Year": "Sep-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 30.12,
+              "Staying Power": 78.9
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Sep-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 88.9,
+              "Staying Power": 92.1
+            }, {
+              "Creator": "Jacques Cousteau",
+              "Month-Year": "Sep-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 93.45,
+              "Staying Power": 41.23
+            }, {
+              "Creator": "Creative Cathy",
+              "Month-Year": "Sep-24",
+              "Country": "GB",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "Instagram",
+              "Stopping Power": 76.89,
+              "Staying Power": 36.78
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Aug-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "Instagram",
+              "Stopping Power": 35.67,
+              "Staying Power": 79.32
+            }, {
+              "Creator": "Authentic Alison",
+              "Month-Year": "Aug-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "Instagram",
+              "Stopping Power": 63.21,
+              "Staying Power": 32.1
+            }, {
+              "Creator": "Jacques Cousteau",
+              "Month-Year": "Aug-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "Instagram",
+              "Stopping Power": 87.65,
+              "Staying Power": 82.34
+            }, {
+              "Creator": "Authentic Alison",
+              "Month-Year": "Aug-24",
+              "Country": "GB",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 75.43,
+              "Staying Power": 42.1
+            }, {
+              "Creator": "Creative Cathy",
+              "Month-Year": "Aug-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "Facebook",
+              "Stopping Power": 17.32,
+              "Staying Power": 25.67
+            }, {
+              "Creator": "Jacques Cousteau",
+              "Month-Year": "Aug-24",
+              "Country": "GB",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "Facebook",
+              "Stopping Power": 52.34,
+              "Staying Power": 89.67
+            }, {
+              "Creator": "Authentic Alison",
+              "Month-Year": "Aug-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "Facebook",
+              "Stopping Power": 93.21,
+              "Staying Power": 76.54
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Aug-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "Facebook",
+              "Stopping Power": 15.67,
+              "Staying Power": 39.87
+            }, {
+              "Creator": "Jacques Cousteau",
+              "Month-Year": "Aug-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Wacky Upstart Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 96.54,
+              "Staying Power": 71.23
+            }, {
+              "Creator": "Creative Cathy",
+              "Month-Year": "Aug-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Household Name Brand",
+              "Platform": "YouTube Shorts",
+              "Stopping Power": 61.98,
+              "Staying Power": 54.32
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Aug-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Household Name Brand",
+              "Platform": "YouTube Shorts",
+              "Stopping Power": 28.76,
+              "Staying Power": 91.23
+            }, {
+              "Creator": "Authentic Alison",
+              "Month-Year": "Aug-24",
+              "Country": "GB",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Household Name Brand",
+              "Platform": "YouTube Shorts",
+              "Stopping Power": 50.21,
+              "Staying Power": 62.34
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Aug-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Household Name Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 69.43,
+              "Staying Power": 58.76
+            }, {
+              "Creator": "Jacques Cousteau",
+              "Month-Year": "Jul-24",
+              "Country": "GB",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Household Name Brand",
+              "Platform": "YouTube Shorts",
+              "Stopping Power": 23.45,
+              "Staying Power": 87.65
+            }, {
+              "Creator": "Creative Cathy",
+              "Month-Year": "Jul-24",
+              "Country": "GB",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Household Name Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 75.43,
+              "Staying Power": 29.87
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Jul-24",
+              "Country": "GB",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Household Name Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 86.54,
+              "Staying Power": 33.45
+            }, {
+              "Creator": "Authentic Alison",
+              "Month-Year": "Jul-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Household Name Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 65.78,
+              "Staying Power": 51.23
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Jul-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Household Name Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 46.32,
+              "Staying Power": 59.87
+            }, {
+              "Creator": "Jacques Cousteau",
+              "Month-Year": "Jul-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Household Name Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 32.1,
+              "Staying Power": 84.56
+            }, {
+              "Creator": "Creative Cathy",
+              "Month-Year": "Jul-24",
+              "Country": "GB",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Household Name Brand",
+              "Platform": "Instagram",
+              "Stopping Power": 14.32,
+              "Staying Power": 95.43
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Jul-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Household Name Brand",
+              "Platform": "Instagram",
+              "Stopping Power": 71.23,
+              "Staying Power": 47.65
+            }, {
+              "Creator": "Authentic Alison",
+              "Month-Year": "Jul-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Household Name Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 41.23,
+              "Staying Power": 75.43
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Jul-24",
+              "Country": "GB",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Household Name Brand",
+              "Platform": "Instagram",
+              "Stopping Power": 68.9,
+              "Staying Power": 56.78
+            }, {
+              "Creator": "Authentic Alison",
+              "Month-Year": "Jul-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Household Name Brand",
+              "Platform": "Instagram",
+              "Stopping Power": 19.87,
+              "Staying Power": 91.23
+            }, {
+              "Creator": "Jacques Cousteau",
+              "Month-Year": "Jul-24",
+              "Country": "GB",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Household Name Brand",
+              "Platform": "Facebook",
+              "Stopping Power": 39.87,
+              "Staying Power": 60.98
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Jul-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Household Name Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 84.56,
+              "Staying Power": 28.76
+            }, {
+              "Creator": "Authentic Alison",
+              "Month-Year": "Jul-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Household Name Brand",
+              "Platform": "Facebook",
+              "Stopping Power": 68.9,
+              "Staying Power": 51.23
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Jul-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Household Name Brand",
+              "Platform": "Facebook",
+              "Stopping Power": 28.76,
+              "Staying Power": 62.34
+            }, {
+              "Creator": "Authentic Alison",
+              "Month-Year": "Jul-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Household Name Brand",
+              "Platform": "Facebook",
+              "Stopping Power": 80.12,
+              "Staying Power": 55.67
+            }, {
+              "Creator": "Creative Cathy",
+              "Month-Year": "Sep-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Household Name Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 76.12,
+              "Staying Power": 12.78
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Sep-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Household Name Brand",
+              "Platform": "YouTube Shorts",
+              "Stopping Power": 41.23,
+              "Staying Power": 48.9
+            }, {
+              "Creator": "Jacques Cousteau",
+              "Month-Year": "Sep-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Household Name Brand",
+              "Platform": "YouTube Shorts",
+              "Stopping Power": 19.87,
+              "Staying Power": 85.67
+            }, {
+              "Creator": "Influential Ike",
+              "Month-Year": "Sep-24",
+              "Country": "US",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Household Name Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 79.32,
+              "Staying Power": 26.89
+            }, {
+              "Creator": "Authentic Alison",
+              "Month-Year": "Sep-24",
+              "Country": "US",
+              "Brand Category": "Beauty and Personal Care",
+              "Brand Name": "Household Name Brand",
+              "Platform": "YouTube Shorts",
+              "Stopping Power": 45.67,
+              "Staying Power": 52.34
+            }, {
+              "Creator": "Creative Cathy",
+              "Month-Year": "Sep-24",
+              "Country": "GB",
+              "Brand Category": "Entertainment and Streaming",
+              "Brand Name": "Household Name Brand",
+              "Platform": "TikTok",
+              "Stopping Power": 93.21,
+              "Staying Power": 81.23
+            }];
+            const chart = Highcharts.chart('chart-container', {
+              chart: {
+                type: 'scatter',
+                zooming: {
+                  type: 'xy'
+                },
+                backgroundColor: 'var(--container-bg)',
+                style: {
+                  fontFamily: 'Poppins, sans-serif'
+                }
+              },
+              title: {
+                text: 'SSP - Sample',
+                align: 'left',
+                style: {
+                  fontWeight: 'bold',
+                  fontSize: '1.5rem'
+                }
+              },
+              subtitle: {
+                text: 'Source: Element Human',
+                align: 'left'
+              },
+              xAxis: {
+                title: {
+                  text: 'Staying Power',
+                  style: {
+                    color: 'var(--accent-blue)',
+                    fontSize: '16px',
+                    fontWeight: '600'
+                  }
+                },
+                labels: {
+                  format: '{value}'
+                },
+                min: 0,
+                max: 100,
+                tickInterval: 10,
+                gridLineWidth: 1,
+                gridLineColor: '#f0f0f0'
+              },
+              yAxis: {
+                title: {
+                  text: 'Stopping Power',
+                  style: {
+                    color: 'var(--accent-pink)',
+                    fontSize: '16px',
+                    fontWeight: '600'
+                  }
+                },
+                labels: {
+                  format: '{value}'
+                },
+                min: 0,
+                max: 100,
+                tickInterval: 10,
+                gridLineWidth: 1,
+                gridLineColor: '#f0f0f0'
+              },
+              legend: {
+                enabled: true,
+                itemStyle: {
+                  fontWeight: '500'
+                }
+              },
+              plotOptions: {
+                scatter: {
+                  marker: {
+                    radius: 6,
+                    lineWidth: 1.5,
+                    lineColor: 'rgba(255, 255, 255, 0.8)',
+                    states: {
+                      hover: {
+                        enabled: true,
+                        lineWidthPlus: 1,
+                        radiusPlus: 2
+                      }
+                    }
+                  },
+                  jitter: {
+                    x: 0.005
+                  }
+                }
+              },
+              tooltip: {
+                useHTML: true,
+                headerFormat: '<span style="font-size: 1.1em"><b>{point.key}</b></span><br/>',
+                pointFormat: '<b>Creator:</b> {point.custom.Creator}<br/>' +
+                  '<b>Brand:</b> {point.custom.Brand Name}<br/>' +
+                  '<b>Platform:</b> {point.custom.Platform}<br/>' +
+                  '<b>Staying Power:</b> {point.x}<br/>' +
+                  '<b>Stopping Power:</b> {point.y}',
+                style: {
+                  fontSize: '0.9rem'
+                },
+                backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                borderColor: '#ccc',
+                borderRadius: 10,
+                shadow: true
+              },
+              credits: {
+                enabled: false
+              },
+              series
+            });
+            function reload() {
+              const checkFilters = (elm) => {
+                return filters.every(f => f.value === null || f.value === elm[f.id]);
+              };
+              const getData = Platform => {
+                return data.filter(elm => elm.Platform === Platform && checkFilters(elm))
+                  .map(elm => ({
+                    id: elm.Creator,
+                    x: elm["Staying Power"],
+                    y: elm["Stopping Power"],
+                    custom: elm
+                  }));
+              };
+              series.forEach((s, index) => {
+                chart.series[index].setData(getData(s.id), false);
+              });
+              chart.redraw();
+            }
+            function initializeFilters() {
+              filters.forEach(f => {
+                f.options = Array.from(new Set(data.map(item => item[f.id])))
+                  .sort((a, b) => a.toString().localeCompare(b.toString()));
+                const control = document.getElementById(f.id);
+                control.innerHTML = '<option selected value> -- all -- </option>' +
+                  f.options.map(d => `<option value="${d}">${d}</option>`).join("\n");
+                control.addEventListener("change", function() {
+                  f.value = this.value === "" ? null : this.value;
+                  reload();
+                });
+              });
+            }
+            // Initialize filters and load all data points
+            initializeFilters();
+            reload();
+          </script>
+    </body>
+    </html>

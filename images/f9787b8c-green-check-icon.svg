@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16" version="1.1">
+  <title>Icon/circle check</title>
+  <desc>Created with Sketch.</desc>
+  <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Icon/circle-check">
+      <g>
+        <circle id="Oval-Copy" fill="#49B882" cx="8" cy="8" r="8"/>
+        <path d="M5.14261057,8.38497914 C4.87057572,8.19576054 4.49665591,8.26289639 4.30743732,8.53493124 C4.11821872,8.8069661 4.18535457,9.1808859 4.45738943,9.3701045 L6.78891865,10.9918404 C7.04653563,11.1710304 7.39871587,11.1214407 7.5968345,10.8780798 L11.5853053,5.97880207 C11.794512,5.72182106 11.7557831,5.34390133 11.4988021,5.13469473 C11.2418211,4.92548813 10.8639014,4.96421693 10.6546948,5.22119793 L7.01744334,9.68905181 L5.14261057,8.38497914 Z" id="icon-nano-done-copy" fill="#FFF" fill-rule="nonzero"/>
+      </g>
+    </g>
+  </g>
+</svg>

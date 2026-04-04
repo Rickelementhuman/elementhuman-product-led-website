@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="353px" height="207px" viewBox="0 0 353 207" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>right</title>
+    <desc>Created with Sketch.</desc>
+    <g id="EH-Website-HXDesign-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.799176897">
+        <g id="03-HXDesign-Desktop-v2" transform="translate(-1027.000000, -565.000000)">
+            <g id="HX-Design" transform="translate(52.000000, 362.000000)">
+                <g id="intro">
+                    <g id="BG">
+                        <g id="right" transform="translate(1136.000000, 387.500000) scale(-1, 1) translate(-1136.000000, -387.500000) translate(946.000000, 203.000000)">
+                            <rect id="Rectangle" fill="#7E0698" opacity="0.499953497" x="115" y="186" width="21" height="21"></rect>
+                            <rect id="Rectangle" fill="#D031EA" x="185" y="81" width="34" height="34"></rect>
+                            <path d="M151,166.55466 C156.335771,162.957806 156.715909,164.813626 161.402589,166.55466 C166.089268,168.295693 166.7161,164.370215 171.017514,164.370215 C176.158598,164.370215 176.627829,167.820332 181.653318,166.306936 C183.455272,165.764288 183.595933,164.877585 186.17692,164.370215 C192.888498,163.050854 193.715371,169.501475 200.814143,165.434744 C207.912916,161.368013 209.303019,167.346779 214,166.306936" id="green-path" stroke="#25CC7D" stroke-width="3" transform="translate(182.500000, 165.500000) scale(-1, 1) translate(-182.500000, -165.500000) "></path>
+                            <polygon id="Triangle" stroke="#F67B0E" stroke-width="4" points="277 134 298 168 256 168"></polygon>
+                            <rect id="Rectangle" stroke="#6DC9FF" stroke-width="4" x="91" y="41" width="47" height="18"></rect>
+                            <circle id="Oval" fill="#DE107E" cx="53" cy="17" r="17"></circle>
+                            <circle id="Oval" fill="#FF2198" cx="344" cy="116" r="7"></circle>
+                            <circle id="Oval" stroke="#FF68B9" stroke-width="4" cx="52.5" cy="133.5" r="52.5"></circle>
+                            <circle id="Oval" fill="#FF68B9" opacity="0.497744606" cx="288" cy="41" r="24"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="359px" height="72px" viewBox="0 0 359 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>graphic@1.5x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="EH-Website-HXDesign-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.19984654" stroke-linecap="round" stroke-linejoin="round">
+        <g id="03-HXDesign-Desktop-v2" transform="translate(-278.000000, -4223.000000)" stroke="#13202F" stroke-width="6">
+            <g id="HX-Design" transform="translate(-58.000000, 353.000000)">
+                <g id="Body" transform="translate(228.000000, 984.000000)">
+                    <g id="03" transform="translate(20.000000, 1836.000000)">
+                        <g id="graphic" transform="translate(91.000000, 1053.000000)">
+                            <g id="impractical" transform="translate(293.000000, 6.000000)">
+                                <path d="M24,39 L24,51 C24,55.9705627 28.0294373,60 33,60 L45,33 L45,-0.000388980094 L11.16,-0.000388980094 C8.16813976,-0.0338230809 5.60861653,2.14177166 5.16,5.1 L1.02,32.1 C0.755831937,33.840434 1.26930847,35.6090736 2.42442447,36.937457 C3.57954047,38.2658404 5.25974489,39.0199339 7.02,39 L24,39 Z M45,2.57606436e-16 L53.01,2.57606436e-16 C56.5244688,-0.0621541838 59.5288371,2.51670276 60,6 L60,27 C59.5288371,30.4832972 56.5244688,33.0621542 53.01,33 L45,33" id="Shape"></path>
+                            </g>
+                            <g id="unfocused" transform="translate(142.000000, 9.000000)">
+                                <polyline id="Path" points="36 0 51 0 51 15"></polyline>
+                                <line x1="0" y1="51" x2="51" y2="0" id="Path"></line>
+                                <polyline id="Path" points="51 39 51 54 36 54"></polyline>
+                                <line x1="33" y1="36" x2="51" y2="54" id="Path"></line>
+                                <line x1="0" y1="3" x2="15" y2="18" id="Path"></line>
+                            </g>
+                            <g id="slow">
+                                <circle id="Oval" cx="21" cy="33" r="21"></circle>
+                                <polyline id="Path" points="21 24 21 33 25.5 37.5"></polyline>
+                                <path d="M34.53,49.05 L33.48,60.54 C33.1997821,63.6411825 30.5937912,66.0126343 27.48,66.0000502 L14.49,66.0000502 C11.3762088,66.0126343 8.77021788,63.6411825 8.49,60.54 L7.44,49.05 M7.47,16.95 L8.52,5.46 C8.79920482,2.37029868 11.3877104,0.00292175457 14.49,-5.02466376e-05 L27.54,-5.02466376e-05 C30.6537912,-0.0126342831 33.2597821,2.35881748 33.54,5.46 L34.59,16.95" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

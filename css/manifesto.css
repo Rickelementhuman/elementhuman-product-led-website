@@ -1,0 +1,434 @@
+/* ============================================
+   Element Human — Manifesto Page Styles
+   Extends styles.css design system
+   ============================================ */
+
+/* ---------- Orbs: fewer, subtler ---------- */
+.manifesto-page .orb-4,
+.manifesto-page .orb-5,
+.manifesto-page .orb-6 { display: none; }
+.manifesto-page .orb-1 { opacity: 0.25; }
+.manifesto-page .orb-2 { opacity: 0.2; }
+.manifesto-page .orb-3 { opacity: 0.2; }
+
+/* ---------- Hero ---------- */
+.manifesto-hero {
+  padding: 219px 0 75px;
+  text-align: center;
+}
+.manifesto-hero .container {
+  max-width: 1000px;
+}
+.manifesto-hero .eyebrow {
+  margin-bottom: 20px;
+}
+.manifesto-hero h1 {
+  font-size: clamp(36px, 5.5vw, 64px);
+  font-weight: 800;
+  line-height: 1.15;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ---------- Divider ---------- */
+.manifesto-divider {
+  max-width: 1091px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+.manifesto-divider-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-border), rgba(0,122,255,0.2), var(--glass-border), transparent);
+}
+
+/* ---------- Manifesto Body ---------- */
+.manifesto-body {
+  padding: 75px 0 100px;
+}
+.manifesto-body .container {
+  max-width: 1091px;
+}
+.manifesto-block {
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 56px;
+}
+.manifesto-block:last-child {
+  margin-bottom: 0;
+}
+.manifesto-block .highlight {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ---------- Full-Screen Pillar Sections ---------- */
+.pillar-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--glass-border);
+}
+.pillar-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+.pillar-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.pillar-text .eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.pillar-title {
+  font-size: clamp(48px, 8vw, 120px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+.pillar-question {
+  font-size: clamp(18px, 2.5vw, 24px);
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.pillar-section .btn-outline {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+/* Per-pillar title gradients */
+.pillar-strategy .pillar-title {
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.pillar-discovery .pillar-title {
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.pillar-creation .pillar-title {
+  background: linear-gradient(135deg, var(--amber), var(--red));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.pillar-distribution .pillar-title {
+  background: linear-gradient(135deg, var(--teal), var(--green));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.pillar-measurement .pillar-title {
+  background: linear-gradient(135deg, var(--green), var(--blue));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---------- Pillar Graphics Container ---------- */
+.pillar-graphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 480px;
+  justify-self: center;
+  position: relative;
+}
+
+/* ---- Strategy: Orbital Constellation ---- */
+.orbital-constellation {
+  width: 100%;
+  height: 100%;
+}
+.orbital-constellation .orbit-ring {
+  fill: none;
+  stroke: rgba(0, 122, 255, 0.12);
+  stroke-width: 1;
+}
+.orbital-constellation .orbit-line {
+  stroke: url(#strategy-grad);
+  stroke-width: 1;
+  opacity: 0.4;
+}
+.orbital-constellation .center-node {
+  fill: url(#strategy-grad);
+  filter: drop-shadow(0 0 12px rgba(0, 122, 255, 0.5));
+}
+.orbital-constellation .sat-node {
+  fill: url(#strategy-grad);
+  opacity: 0;
+  transform-origin: center;
+  transition: opacity 0.6s ease;
+}
+.pillar-strategy.in-view .sat-node {
+  opacity: 1;
+  animation: nodePulse 3s ease-in-out infinite;
+}
+.pillar-strategy.in-view .orbit-group {
+  animation: orbitSpin 60s linear infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes orbitSpin {
+  to { transform: rotate(360deg); }
+}
+@keyframes nodePulse {
+  0%, 100% { r: 6; opacity: 0.8; }
+  50% { r: 8; opacity: 1; }
+}
+
+/* ---- Discovery: Network Pulse ---- */
+.network-pulse-canvas {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+}
+
+/* ---- Creation: Shape Composer ---- */
+.shape-composer {
+  width: 100%;
+  height: 100%;
+}
+.shape-composer .shape-element {
+  fill: none;
+  stroke-width: 1.5;
+  stroke: url(#creation-grad);
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.shape-composer .shape-glow {
+  fill: none;
+  stroke-width: 6;
+  opacity: 0;
+  filter: blur(6px);
+  transition: opacity 1.2s ease 0.4s;
+}
+.shape-composer .shape-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  fill: var(--text-muted);
+  letter-spacing: 1.5px;
+  text-anchor: middle;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.shape-composer .composer-center {
+  fill: url(#creation-grad);
+  opacity: 0;
+  transition: opacity 0.6s ease 0.6s;
+  filter: drop-shadow(0 0 10px rgba(249,190,0,0.4));
+}
+/* Staggered entry for each shape group */
+.shape-composer .shape-group:nth-child(1) .shape-element { transition-delay: 0s; }
+.shape-composer .shape-group:nth-child(2) .shape-element { transition-delay: 0.2s; }
+.shape-composer .shape-group:nth-child(3) .shape-element { transition-delay: 0.4s; }
+.shape-composer .shape-group:nth-child(4) .shape-element { transition-delay: 0.6s; }
+.shape-composer .shape-group:nth-child(1) .shape-label { transition-delay: 0.3s; }
+.shape-composer .shape-group:nth-child(2) .shape-label { transition-delay: 0.5s; }
+.shape-composer .shape-group:nth-child(3) .shape-label { transition-delay: 0.7s; }
+.shape-composer .shape-group:nth-child(4) .shape-label { transition-delay: 0.9s; }
+.shape-composer .shape-group:nth-child(1) .shape-glow { transition-delay: 0.2s; }
+.shape-composer .shape-group:nth-child(2) .shape-glow { transition-delay: 0.4s; }
+.shape-composer .shape-group:nth-child(3) .shape-glow { transition-delay: 0.6s; }
+.shape-composer .shape-group:nth-child(4) .shape-glow { transition-delay: 0.8s; }
+
+.pillar-creation.in-view .shape-element {
+  opacity: 1;
+}
+.pillar-creation.in-view .shape-glow {
+  opacity: 0.15;
+}
+.pillar-creation.in-view .shape-label {
+  opacity: 0.6;
+}
+.pillar-creation.in-view .composer-center {
+  opacity: 1;
+}
+.pillar-creation.in-view .shape-float {
+  animation: shapeFloat 6s ease-in-out infinite alternate;
+}
+.pillar-creation.in-view .shape-float-alt {
+  animation: shapeFloatAlt 7s ease-in-out infinite alternate;
+}
+@keyframes shapeFloat {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(4px, -6px); }
+}
+@keyframes shapeFloatAlt {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-5px, 4px); }
+}
+
+/* ---- Distribution: Ripple Broadcast ---- */
+.ripple-broadcast {
+  width: 100%;
+  height: 100%;
+}
+.ripple-ring {
+  fill: none;
+  stroke: url(#distribution-grad);
+  stroke-width: 1.5;
+  opacity: 0;
+  transform-origin: 50% 50%;
+}
+.pillar-distribution.in-view .ripple-ring {
+  animation: rippleExpand 4s ease-out infinite;
+}
+.pillar-distribution.in-view .ripple-ring:nth-child(2) { animation-delay: 0.8s; }
+.pillar-distribution.in-view .ripple-ring:nth-child(3) { animation-delay: 1.6s; }
+.pillar-distribution.in-view .ripple-ring:nth-child(4) { animation-delay: 2.4s; }
+.pillar-distribution.in-view .ripple-ring:nth-child(5) { animation-delay: 3.2s; }
+.ripple-center {
+  fill: url(#distribution-grad);
+  filter: drop-shadow(0 0 10px rgba(16,168,183,0.5));
+}
+.ripple-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  fill: var(--text-muted);
+  text-anchor: middle;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: opacity 0.6s ease 1s;
+}
+.pillar-distribution.in-view .ripple-label {
+  opacity: 0.7;
+}
+@keyframes rippleExpand {
+  0% { transform: scale(0.15); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+/* ---- Measurement: Metrics Chart ---- */
+.metrics-chart {
+  width: 100%;
+  height: 100%;
+}
+.metric-bar-bg {
+  fill: rgba(255,255,255,0.05);
+  rx: 4;
+}
+.metric-bar-fill {
+  fill: url(#measurement-grad);
+  rx: 4;
+  transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.metric-bar-fill[data-width] {
+  width: 0;
+}
+.pillar-measurement.in-view .metric-bar-fill {
+  /* width set by JS */
+}
+.metric-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  fill: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+.metric-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  fill: var(--text);
+  text-anchor: end;
+}
+.metric-curve {
+  fill: none;
+  stroke: url(#measurement-grad);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition: stroke-dashoffset 2s ease 0.5s;
+}
+.pillar-measurement.in-view .metric-curve {
+  stroke-dashoffset: 0;
+}
+.metric-curve-area {
+  fill: url(#measurement-area-grad);
+  opacity: 0;
+  transition: opacity 1s ease 1.5s;
+}
+.pillar-measurement.in-view .metric-curve-area {
+  opacity: 1;
+}
+
+/* ---------- Closing CTA ---------- */
+.manifesto-cta {
+  padding: 80px 0 120px;
+  text-align: center;
+}
+.manifesto-cta .container {
+  max-width: 600px;
+}
+.manifesto-cta-line {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 600;
+  margin-bottom: 32px;
+  line-height: 1.4;
+}
+
+/* ---------- Footer ---------- */
+.manifesto-footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--glass-border);
+  text-align: center;
+}
+.manifesto-footer p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .manifesto-hero {
+    padding: 120px 0 48px;
+  }
+  .manifesto-body {
+    padding: 48px 0 80px;
+  }
+  .manifesto-body .container {
+    max-width: 100%;
+  }
+  .manifesto-block {
+    margin-bottom: 40px;
+  }
+  .pillar-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .pillar-graphic {
+    max-width: 60vw;
+    order: -1;
+  }
+  .pillar-text {
+    align-items: center;
+  }
+  .pillar-section .btn-outline {
+    align-self: center;
+  }
+  .pillar-title {
+    letter-spacing: -1px;
+  }
+  .manifesto-cta {
+    padding: 60px 0 80px;
+  }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="20px" viewBox="0 0 24 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>before-08-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="EH-Website-HXWorkbench-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="01-Product-Desktop-v2" transform="translate(-902.000000, -1411.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="Product" transform="translate(-34.000000, 209.000000)">
+                <g id="old-vs-new" transform="translate(34.000000, 884.000000)">
+                    <g id="Before" transform="translate(0.000000, 130.000000)">
+                        <g id="graphic-before" transform="translate(308.000000, 156.000000)">
+                            <g id="before-08" transform="translate(565.000000, 0.000000)">
+                                <g id="before-08-icon" transform="translate(30.000000, 33.002195)">
+                                    <polyline id="Path" points="0 0.99780454 0 6.99780454 6 6.99780454"></polyline>
+                                    <polyline id="Path" points="22 16.9978045 22 10.9978045 16 10.9978045"></polyline>
+                                    <path d="M19.49,5.99780454 C18.4591184,3.08461619 16.0057328,0.904022785 12.9917133,0.222062805 C9.97769373,-0.459897175 6.82455916,0.452150273 4.64,2.63780454 L0,6.99780454 M22,10.9978045 L17.36,15.3578045 C15.1754408,17.5434588 12.0223063,18.4555063 9.00828672,17.7735463 C5.99426717,17.0915863 3.54088164,14.9109929 2.51,11.9978045" id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

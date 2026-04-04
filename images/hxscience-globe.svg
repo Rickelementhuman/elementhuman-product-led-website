@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="67px" height="67px" viewBox="0 0 67 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/globe@2x</title>
+    <g id="EH-Website-Hover-final-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="05-HXScience-hover-final" transform="translate(-242.000000, -694.000000)" stroke="#00A0FF" stroke-width="4">
+            <g id="Body" transform="translate(-58.000000, 337.000000)">
+                <g id="Our-foundation">
+                    <g id="graphic" transform="translate(269.000000, 325.000000)">
+                        <g id="experience">
+                            <g id="icon/globe" transform="translate(33.000000, 34.000000)">
+                                <circle id="Oval" cx="31.5" cy="31.5" r="31.5"></circle>
+                                <line x1="0" y1="31.5" x2="63" y2="31.5" id="Path"></line>
+                                <path d="M31.5,0 C39.3165012,8.62581162 43.7586024,19.8199066 44,31.5 C43.7586024,43.1800934 39.3165012,54.3741884 31.5,63 C23.6834988,54.3741884 19.2413976,43.1800934 19,31.5 C19.2413976,19.8199066 23.6834988,8.62581162 31.5,0 L31.5,0 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

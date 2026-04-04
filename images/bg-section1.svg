@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="422px" height="361px" viewBox="0 0 422 361" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>bg-left</title>
+    <desc>Created with Sketch.</desc>
+    <g id="EH-Website-Homepage-v2-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00-Homepage-doctors-Desktop-v2" transform="translate(-63.000000, -614.000000)">
+            <g id="What-we-offer" transform="translate(63.000000, 614.000000)">
+                <g id="BG">
+                    <g id="bg-left">
+                        <rect id="Rectangle" fill="#7E0698" x="148" y="135" width="21" height="21"></rect>
+                        <rect id="Rectangle" fill="#D031EA" opacity="0.500953311" x="143" y="0" width="34" height="34"></rect>
+                        <rect id="Rectangle" fill="#8F21A1" x="281" y="58" width="14" height="14"></rect>
+                        <path d="M192,215.445037 C200.892952,209.450282 201.526516,212.543315 209.337648,215.445037 C217.14878,218.34676 218.1935,211.804297 225.362523,211.804297 C233.930997,211.804297 234.713048,217.554491 243.088863,215.032164 C246.09212,214.127752 246.326554,212.649914 250.628199,211.804297 C261.814163,209.605362 263.192285,220.356396 275.023572,213.578511 C286.85486,206.800626 289.171698,216.765236 297,215.032164" id="green-path" stroke="#61E9A9" stroke-width="3" transform="translate(244.500000, 213.687272) scale(-1, 1) translate(-244.500000, -213.687272) "></path>
+                        <path d="M315,94.5546595 C320.335771,90.9578061 320.715909,92.8136261 325.402589,94.5546595 C330.089268,96.295693 330.7161,92.3702151 335.017514,92.3702151 C340.158598,92.3702151 340.627829,95.8203317 345.653318,94.3069357 C347.455272,93.7642881 347.595933,92.8775852 350.17692,92.3702151 C356.888498,91.050854 357.715371,97.5014747 364.814143,93.4347437 C371.912916,89.3680127 373.303019,95.3467785 378,94.3069357" id="green-path" stroke="#25CC7D" stroke-width="3" transform="translate(346.500000, 93.500000) scale(-1, 1) translate(-346.500000, -93.500000) "></path>
+                        <path d="M305,301.703106 C308.557181,299.305204 308.810606,300.542417 311.935059,301.703106 C315.059512,302.863795 315.4774,300.24681 318.345009,300.24681 C321.772399,300.24681 322.085219,302.546888 325.435545,301.537957 C326.636848,301.176192 326.730622,300.585057 328.45128,300.24681 C332.925665,299.367236 333.476914,303.66765 338.209429,300.956496 C342.941944,298.245342 343.868679,302.231186 347,301.537957" id="green-path" stroke="#25CC7D" stroke-width="3" transform="translate(326.000000, 301.000000) scale(-1, 1) translate(-326.000000, -301.000000) "></path>
+                        <polygon id="Triangle" stroke="#F9BE00" stroke-width="4" points="250 285.642578 267 312.642578 233 312.642578"></polygon>
+                        <polygon id="Triangle" fill="#F67B0E" points="213 66 234 100 192 100"></polygon>
+                        <polygon id="Triangle" fill="#F9BE00" points="361.5 223 368 234 355 234"></polygon>
+                        <rect id="Rectangle" fill="#6DC9FF" x="113" y="242" width="47" height="18"></rect>
+                        <rect id="Rectangle" stroke="#00A0FF" stroke-width="4" x="391" y="58" width="29" height="11"></rect>
+                        <rect id="Rectangle" fill="#007AFF" x="0" y="72" width="68" height="26"></rect>
+                        <circle id="Oval" fill="#DE107E" cx="284" cy="173" r="17"></circle>
+                        <circle id="Oval" fill="#FF2198" cx="406" cy="128" r="7"></circle>
+                        <circle id="Oval" stroke="#FF68B9" stroke-width="4" cx="59.5" cy="192.5" r="36.5"></circle>
+                        <circle id="Oval" fill="#FF68B9" opacity="0.497744606" cx="153" cy="337" r="24"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

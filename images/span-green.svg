@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="152px" height="11px" viewBox="0 0 152 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>green-path@1.5x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="What-we-do/Desktop/v2" transform="translate(-303.000000, -290.000000)" stroke="#25CC7D" stroke-width="3">
+            <g transform="translate(-176.000000, 0.000000)" id="paragraph">
+                <g>
+                    <g transform="translate(479.307617, 152.000000)">
+                        <path d="M-1.71951342e-12,145.593486 C12.7578125,136.976299 13.6667224,141.422393 24.8725586,145.593486 C36.0783948,149.764579 37.5771484,140.360088 47.8618164,140.360088 C60.1541333,140.360088 61.2760622,148.625729 73.2919922,145 C77.6004583,143.699948 77.9367777,141.575623 84.1079102,140.360088 C100.155273,137.199219 102.132324,152.65334 119.105469,142.91044 C136.078613,133.16754 139.402344,147.491211 150.632813,145" id="green-path" transform="translate(75.316406, 143.066778) scale(-1, 1) translate(-75.316406, -143.066778) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

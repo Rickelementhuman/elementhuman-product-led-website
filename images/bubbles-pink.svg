@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="993px" height="680px" viewBox="0 0 993 680" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>bubbles</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="116.221065%" id="linearGradient-1">
+            <stop stop-color="#FF0088" offset="0%"></stop>
+            <stop stop-color="#560664" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-22.2%" y="-22.2%" width="144.4%" height="144.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="99.5117188%" id="linearGradient-3">
+            <stop stop-color="#FF0088" offset="0%"></stop>
+            <stop stop-color="#560664" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-21.4%" y="-21.4%" width="142.9%" height="142.9%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="40.9234375%" y1="34.3390625%" x2="50%" y2="99.5117188%" id="linearGradient-5">
+            <stop stop-color="#FF0088" offset="0%"></stop>
+            <stop stop-color="#560664" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="EH-Website-Blog-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-Blog-Desktop-v2" transform="translate(-333.000000, -119.000000)">
+            <g id="Hero" transform="translate(-11.000000, 0.000000)">
+                <g id="bg">
+                    <g id="bubbles" transform="translate(344.000000, 144.000000)">
+                        <circle id="bubble" fill="url(#linearGradient-1)" opacity="0.596935454" filter="url(#filter-2)" cx="660.5" cy="67.5" r="67.5"></circle>
+                        <path d="M945,294 C958.476953,294 970.17483,286.382874 976.023313,275.218941 C978.563298,270.370467 980,264.853013 980,259 C980,239.670034 964.329966,224 945,224 C925.670034,224 910,239.670034 910,259 C910,278.329966 925.670034,294 945,294 Z" id="bubble" fill="url(#linearGradient-3)" opacity="0.600027902" filter="url(#filter-4)"></path>
+                        <circle id="bubble" fill="url(#linearGradient-5)" opacity="0.298223586" cx="250" cy="405" r="250"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

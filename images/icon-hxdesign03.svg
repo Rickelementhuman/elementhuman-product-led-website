@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>practical@1.5x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="EH-Website-HXDesign-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="03-HXDesign-Desktop-v2" transform="translate(-264.000000, -4954.000000)" stroke="#13202F" stroke-width="6">
+            <g id="HX-Design" transform="translate(-58.000000, 353.000000)">
+                <g id="Body" transform="translate(228.000000, 984.000000)">
+                    <g id="03" transform="translate(20.000000, 1836.000000)">
+                        <g transform="translate(30.000000, 1744.000000)" id="practical">
+                            <g transform="translate(47.000000, 40.000000)">
+                                <path d="M36,21 L36,9 C36,4.02943725 31.9705627,-1.33226763e-15 27,-1.33226763e-15 L15,27 L15,60.000389 L48.84,60.000389 C51.8318602,60.0338231 54.3913835,57.8582283 54.84,54.9 L58.98,27.9 C59.2441681,26.159566 58.7306915,24.3909264 57.5755755,23.062543 C56.4204595,21.7341596 54.7402551,20.9800661 52.98,21 L36,21 Z M15,60 L6,60 C2.6862915,60 0,57.3137085 0,54 L0,33 C0,29.6862915 2.6862915,27 6,27 L15,27" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

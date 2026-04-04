@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="EH-Website-Homepage-v2-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="00-Homepage-doctors-Desktop-v2" transform="translate(-548.000000, -1144.000000)" stroke="#007AFF" stroke-width="4">
+            <g id="Intro" transform="translate(-183.000000, 642.000000)">
+                <g id="slider" transform="translate(718.000000, 489.000000)">
+                    <g id="Icon/arrow/left-circle">
+                        <g transform="translate(26.000000, 26.000000) scale(-1, 1) translate(-26.000000, -26.000000) " id="Group">
+                            <g transform="translate(15.600000, 15.600000)">
+                                <polyline id="Path" points="10.4 20.8 20.8 10.4 10.4 0"></polyline>
+                                <line x1="1.45483625e-12" y1="10.4" x2="20.8" y2="10.4" id="Path"></line>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

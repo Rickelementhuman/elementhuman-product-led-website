@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1578px" height="735px" viewBox="0 0 1578 735" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>bubbles</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="86.1170615%" y1="0%" x2="29.6859705%" y2="84.4199298%" id="linearGradient-1">
+            <stop stop-color="#4C178E" offset="0%"></stop>
+            <stop stop-color="#7400CA" offset="99.9524916%"></stop>
+        </linearGradient>
+        <linearGradient x1="88.1436507%" y1="26.3380312%" x2="-15.6921875%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#9F00CC" offset="0%"></stop>
+            <stop stop-color="#2E0330" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="166.341556%" y1="-40.7848396%" x2="23.6334749%" y2="93.9055901%" id="linearGradient-3">
+            <stop stop-color="#FB00D2" offset="0%"></stop>
+            <stop stop-color="#A11EF2" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-21.4%" y="-21.4%" width="142.9%" height="142.9%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="EH-Website-Homepage-v2-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.601143973">
+        <g id="Desktop-HD" transform="translate(0.000000, -145.000000)">
+            <g id="bubbles" transform="translate(0.000000, 145.000000)">
+                <circle id="bubble" fill="url(#linearGradient-1)" opacity="0.898530506" cx="1454" cy="611" r="124"></circle>
+                <circle id="bubble" fill="url(#linearGradient-2)" opacity="0.298223586" cx="250" cy="250" r="250"></circle>
+                <circle id="bubble" fill="url(#linearGradient-2)" opacity="0.298223586" cx="1120" cy="460" r="56"></circle>
+                <path d="M524,586 C537.476953,586 549.17483,578.382874 555.023313,567.218941 C557.563298,562.370467 559,556.853013 559,551 C559,531.670034 543.329966,516 524,516 C504.670034,516 489,531.670034 489,551 C489,570.329966 504.670034,586 524,586 Z" id="bubble" fill="url(#linearGradient-3)" opacity="0.600027902" filter="url(#filter-4)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

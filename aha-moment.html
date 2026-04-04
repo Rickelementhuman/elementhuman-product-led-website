@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Aha Moment — Element Human</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/aha-moment.css">
+</head>
+<body>
+
+  <!-- Intro -->
+  <section class="intro">
+    <div class="intro-inner">
+      <span class="eyebrow">THE ELEMENT HUMAN EXPERIENCE</span>
+      <h1>See your creative through<br>your audience's <span class="grad">eyes, heart, and mind.</span></h1>
+      <p class="intro-sub">Scroll to experience what Ellie reveals about a single piece of content.</p>
+      <div class="scroll-cue"><div class="scroll-dot"></div></div>
+    </div>
+  </section>
+
+  <!-- Scroll-driven experience -->
+  <section class="scroller" id="scroller">
+    <div class="pinned" id="pinned">
+
+      <div class="aha-split">
+
+        <!-- LEFT: narration + progress -->
+        <div class="aha-left">
+          <div class="story-col">
+            <div class="story-card active" data-step="0">
+              <h2>Your creative is live.</h2>
+              <p>This is what your audience sees. Content worth thousands in production and millions in media spend.</p>
+              <p class="q">But what actually happens when they see it?</p>
+            </div>
+            <div class="story-card" data-step="1">
+              <span class="pill pill-blue">ATTENTION</span>
+              <h2>Were they watching?</h2>
+              <p>Eye tracking reveals exactly where your audience looked — and what they missed entirely.</p>
+              <p class="insight">87% noticed the product. Only 12% saw your logo.</p>
+            </div>
+            <div class="story-card" data-step="2">
+              <span class="pill pill-pink">EMOTION</span>
+              <h2>How did they react?</h2>
+              <p>Second-by-second emotional response shows which moments resonate and which fall flat.</p>
+              <p class="insight">Peak engagement at 0:08. Attention drops at 0:18 — the brand mention feels forced.</p>
+            </div>
+            <div class="story-card" data-step="3">
+              <span class="pill pill-teal">MEMORY</span>
+              <h2>Will they remember?</h2>
+              <p>Implicit memory testing measures what sticks — not what people say, but what they do.</p>
+              <p class="insight">78% recognized the brand. Only 31% recalled the product unaided.</p>
+            </div>
+            <div class="story-card" data-step="4">
+              <span class="pill pill-green">BRAND UPLIFT</span>
+              <h2>Did it move the needle?</h2>
+              <p>The final proof: did this creative change how people think and intend to act?</p>
+              <p class="insight">+24pt favorability. +12pt purchase intent. It works — but the logo needs repositioning.</p>
+            </div>
+          </div>
+
+          <div class="dots-row">
+            <div class="dot active" data-s="0"><span>Creative</span></div>
+            <div class="dot" data-s="1"><span>Attention</span></div>
+            <div class="dot" data-s="2"><span>Emotion</span></div>
+            <div class="dot" data-s="3"><span>Memory</span></div>
+            <div class="dot" data-s="4"><span>Uplift</span></div>
+          </div>
+        </div>
+
+        <!-- RIGHT: video + overlays + chart -->
+        <div class="aha-right">
+          <div class="creative-wrap" id="creative-wrap">
+            <!-- Background video (scroll-scrubbed) -->
+            <video id="bg-video" class="bg-video"
+              src="video/creative.mp4"
+              muted playsinline preload="auto"
+              disablepictureinpicture></video>
+            <!-- Video controls overlay -->
+            <div class="c-controls">
+              <span class="c-play">&#9654;</span>
+              <span class="c-time" id="c-time">0:00</span>
+              <div class="c-bar"><div class="c-bar-fill" id="c-bar-fill"></div></div>
+              <span class="c-dur" id="c-dur">0:00</span>
+            </div>
+
+            <!-- Dark overlay to dim video when heatmap is active -->
+            <div id="heat-dim" class="layer heat-dim"></div>
+            <!-- Heatmap (absolute over creative) -->
+            <canvas id="heat" class="layer layer-heat"></canvas>
+
+            <!-- Memory card -->
+            <div class="layer layer-memory" id="layer-memory">
+              <div class="mem-card">
+                <div class="mem-title">Implicit Memory Test</div>
+                <div class="mem-row"><span>Brand Logo Recognition</span><span class="mem-val" id="mv-logo">0%</span></div>
+                <div class="mem-track"><div class="mem-fill" id="mf-logo"></div></div>
+                <div class="mem-row"><span>Product Recall (Aided)</span><span class="mem-val" id="mv-aided">0%</span></div>
+                <div class="mem-track"><div class="mem-fill" id="mf-aided"></div></div>
+                <div class="mem-row"><span>Product Recall (Unaided)</span><span class="mem-val" id="mv-unaided">0%</span></div>
+                <div class="mem-track"><div class="mem-fill" id="mf-unaided"></div></div>
+                <div class="mem-row"><span>Key Message Retention</span><span class="mem-val" id="mv-message">0%</span></div>
+                <div class="mem-track"><div class="mem-fill" id="mf-message"></div></div>
+              </div>
+            </div>
+
+            <!-- Uplift card -->
+            <div class="layer layer-uplift" id="layer-uplift">
+              <div class="uplift-card">
+                <div class="uplift-head">Brand Uplift Results</div>
+                <div class="uplift-sub">Exposed vs. Control &middot; 95% confidence</div>
+                <div class="uplift-grid">
+                  <div class="u-metric">
+                    <div class="u-val" id="uv-aw" data-t="14">+0</div>
+                    <div class="u-label">Awareness</div>
+                    <span class="u-sig">Significant</span>
+                  </div>
+                  <div class="u-metric">
+                    <div class="u-val" id="uv-fav" data-t="24">+0</div>
+                    <div class="u-label">Favorability</div>
+                    <span class="u-sig">Significant</span>
+                  </div>
+                  <div class="u-metric">
+                    <div class="u-val" id="uv-con" data-t="18">+0</div>
+                    <div class="u-label">Consideration</div>
+                    <span class="u-sig">Significant</span>
+                  </div>
+                  <div class="u-metric">
+                    <div class="u-val" id="uv-int" data-t="12">+0</div>
+                    <div class="u-label">Purchase Intent</div>
+                    <span class="u-sig">Significant</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Emotion chart (connected below video) -->
+          <div class="emotion-wrap layer" id="layer-emotion">
+            <div class="emotion-chart-wrap">
+              <svg viewBox="0 0 1000 300" preserveAspectRatio="none" class="emotion-svg">
+                <line x1="10" y1="25" x2="990" y2="25" class="gl"/>
+                <line x1="10" y1="85" x2="990" y2="85" class="gl"/>
+                <line x1="10" y1="150" x2="990" y2="150" class="gl"/>
+                <line x1="10" y1="215" x2="990" y2="215" class="gl"/>
+                <line x1="10" y1="275" x2="990" y2="275" class="gl"/>
+                <!-- Attention: low baseline, wide smooth rise peaking ~80 around 0:08 -->
+                <path id="c-att" class="curve c-blue"
+                  d="M10,255 C100,254 180,250 250,242 C320,225 350,170 400,100 C450,80 500,85 550,120 C620,170 700,215 780,240 C860,250 940,254 990,255"/>
+                <!-- Valence: low, broad rounded hill peaking ~140 mid-section -->
+                <path id="c-val" class="curve c-teal"
+                  d="M10,260 C100,258 200,254 300,245 C380,225 430,185 490,145 C550,140 600,155 660,185 C730,218 800,242 880,254 C940,258 970,260 990,260"/>
+                <!-- Happiness: very low, gentle swell peaking ~115 slightly after center -->
+                <path id="c-hap" class="curve c-green"
+                  d="M10,270 C120,268 220,264 310,255 C380,240 430,205 490,160 C540,130 580,118 620,125 C680,150 740,200 800,240 C860,258 930,267 990,270"/>
+                <!-- Surprise: flat, two soft rounded bumps -->
+                <path id="c-sur" class="curve c-amber"
+                  d="M10,275 C80,274 140,273 190,270 C230,262 260,230 300,185 C340,210 370,258 420,272 C470,275 520,274 570,270 C610,258 650,210 700,165 C740,200 770,255 820,272 C870,275 940,275 990,275"/>
+                <!-- Anger: nearly flat, very subtle gentle swell -->
+                <path id="c-ang" class="curve c-red"
+                  d="M10,280 C150,280 260,278 350,275 C420,270 470,262 520,256 C570,262 620,272 700,278 C800,280 900,280 990,280"/>
+                <line id="playhead" class="ph" x1="10" y1="18" x2="10" y2="282"/>
+                <circle id="peak-dot" class="pk-dot" cx="400" cy="100" r="5"/>
+              </svg>
+              <span id="peak-label" class="pk-label">Peak engagement</span>
+            </div>
+            <div class="legend" id="legend">
+              <span><i class="d d-blue"></i>attention</span>
+              <span><i class="d d-teal"></i>valence</span>
+              <span><i class="d d-green"></i>happiness</span>
+              <span><i class="d d-amber"></i>surprise</span>
+              <span><i class="d d-red"></i>anger</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Ask Ellie — Scroll-driven Chat Mockup -->
+  <section class="ask-ellie" id="ask-ellie">
+    <div class="ae-pinned" id="ae-pinned">
+
+      <!-- Feed animation: creatives → Ellie orb -->
+      <div class="ae-feed" id="ae-feed">
+        <div class="ae-intro-text" id="ae-intro-text">
+          <span class="eyebrow">NOW IMAGINE MORE</span>
+          <h2>Feed multiple creatives to Ellie.<br>Then <span class="grad">ask her anything.</span></h2>
+        </div>
+        <div class="ae-cards" id="ae-cards">
+          <div class="ae-card" data-i="0">
+            <div class="ae-card-inner">
+              <div class="ae-card-bar"><span class="ae-card-dot"></span><span class="ae-card-dot"></span><span class="ae-card-dot"></span></div>
+              <div class="ae-card-thumb ae-thumb-a"></div>
+              <span class="ae-card-label">Creative A</span>
+            </div>
+          </div>
+          <div class="ae-card" data-i="1">
+            <div class="ae-card-inner">
+              <div class="ae-card-bar"><span class="ae-card-dot"></span><span class="ae-card-dot"></span><span class="ae-card-dot"></span></div>
+              <div class="ae-card-thumb ae-thumb-b"></div>
+              <span class="ae-card-label">Creative B</span>
+            </div>
+          </div>
+          <div class="ae-card" data-i="2">
+            <div class="ae-card-inner">
+              <div class="ae-card-bar"><span class="ae-card-dot"></span><span class="ae-card-dot"></span><span class="ae-card-dot"></span></div>
+              <div class="ae-card-thumb ae-thumb-c"></div>
+              <span class="ae-card-label">Creative C</span>
+            </div>
+          </div>
+          <div class="ae-card" data-i="3">
+            <div class="ae-card-inner">
+              <div class="ae-card-bar"><span class="ae-card-dot"></span><span class="ae-card-dot"></span><span class="ae-card-dot"></span></div>
+              <div class="ae-card-thumb ae-thumb-d"></div>
+              <span class="ae-card-label">Creative D</span>
+            </div>
+          </div>
+        </div>
+        <div class="ae-orb" id="ae-orb">
+          <div class="ae-orb-ring"></div>
+          <span class="ae-orb-letter">E</span>
+        </div>
+      </div>
+
+      <!-- Chat interface (hidden until scroll-driven feed animation completes) -->
+      <div class="ae-chat" id="ae-chat">
+        <div class="ae-chat-header">
+          <div class="ae-avatar">E</div>
+          <div class="ae-header-info">
+            <span class="ae-header-name">Ellie</span>
+            <span class="ae-header-status">4 creatives analyzed</span>
+          </div>
+        </div>
+        <div class="ae-messages" id="ae-messages">
+          <div class="ae-msg ae-msg-ellie">
+            <div class="ae-avatar-sm">E</div>
+            <div class="ae-bubble" id="ae-welcome"></div>
+          </div>
+        </div>
+        <div class="ae-input-wrap">
+          <input type="text" class="ae-input" placeholder="Ask Ellie about your creatives…" readonly>
+          <button class="ae-send" aria-label="Send">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+        <div class="ae-suggestions" id="ae-suggestions">
+          <button class="ae-sug" data-q="0">Which creative had the highest emotional peak?</button>
+          <button class="ae-sug" data-q="1">Should I use Creative B for my campaign?</button>
+          <button class="ae-sug" data-q="2">Which platform should I run this on?</button>
+          <button class="ae-sug" data-q="3">How can I improve brand recall across all creatives?</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Conclusion -->
+  <section class="outro">
+    <div class="outro-inner">
+      <h2>That's what Ellie sees in <span class="grad">every piece of content.</span></h2>
+      <p>Attention. Emotion. Memory. Brand impact.<br>Four layers of intelligence from a single study.</p>
+      <p>Now imagine asking Ellie any question about what you just saw.</p>
+      <a href="index.html" class="btn">Back to Homepage</a>
+    </div>
+  </section>
+
+  <script src="js/aha-moment.js"></script>
+</body>
+</html>
