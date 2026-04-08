@@ -1,0 +1,13 @@
+.git
+.github
+node_modules
+.wrangler
+.DS_Store
+*.log
+*.md
+README*
+LICENSE*
+.env
+.env.*
+wrangler.jsonc
+wrangler.toml
